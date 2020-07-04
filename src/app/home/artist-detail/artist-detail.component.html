@@ -1,0 +1,9 @@
+<div *ngFor="let artist of artistDetails">
+  <p>{{ artist.Name }}</p>
+
+  <p>{{ artist.Description }}</p>
+  <img
+    src="http://localhost:1337{{ artist.photo.url }}"
+    alt="{{ artist.Name }}"
+  />
+</div>

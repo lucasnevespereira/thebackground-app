@@ -1,0 +1,27 @@
+<div class="search__container">
+  <input
+    class="search__input"
+    type="text"
+    placeholder="Search for artist"
+    [(ngModel)]="term"
+  />
+</div>
+
+<div>
+  <ng-container
+    *ngFor="
+      let artist of artists
+        | filter: term
+        | paginate: { itemsPerPage: 1, currentPage: p }
+    "
+  >
+    <a
+      [routerLink]="['/artist', artist.id]"
+      routerLinkActive="router-link-active"
+    >
+      <app-card [name]="artist.Name" [imageUrl]="artist.photo.url"></app-card>
+    </a>
+  </ng-container>
+</div>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

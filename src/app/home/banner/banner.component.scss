@@ -2,18 +2,19 @@ figure {
   position: relative;
 }
 
+
 figure .absolute-text {
   position: absolute;
-  font-size: 32px;
+  width: 100%;
+  text-align: center;
+  font-size: 42px;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
   text-transform: uppercase;
   font-weight: bold;
 
   @media screen and (max-width: 768px) {
-    font-size: 20px;
+    font-size: 22px;
   }
 
 }

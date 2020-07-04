@@ -1,6 +1,6 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="#">
+    <a class="navbar-item" href="">
       <!-- <img
         src=""
         width="112"
@@ -26,7 +26,11 @@
 
   <div id="navbarBasicExample" class="navbar-menu" #navMenu>
     <div class="navbar-end">
-      <a class="navbar-item">
+      <a
+        class="navbar-item"
+        [routerLink]="['artist']"
+        routerLinkActive="router-link-active"
+      >
         Artistes
       </a>
       <a class="navbar-item">
